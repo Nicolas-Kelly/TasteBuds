@@ -1,0 +1,31 @@
+header{
+    display: flex;
+    justify-content: center;
+}
+
+body{
+    background: url("assets/background.jpg") no-repeat center center fixed rgba(0, 0, 0, 0.6); 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-blend-mode: darken;
+    opacity: 1;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.checkboxes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+textarea{
+    width: 50%;
+}
