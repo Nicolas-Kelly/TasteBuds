@@ -5,23 +5,150 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/style.css"/>
-    <title>Team_Project_1</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Taste Buds</title>
 </head>
 <body>
-    <h1>(Title)</h1>
+    <header>
+        <img src="./assets/TasteBuds logo (Transparent Background).jpeg" alt="logo">
+    </header>
     
-    <p>(Explanation)</p>
+    <main class="place-content-center">
+        <h2 class="text-2xl text-center">Search specific ingredients and filter any dietary restrictions to find recipes and their nutritional facts</h2>
         
-    <input type="text" placeholder="Search.." name="search1">
-        <button type="submit"></button>
-       
-        <button id="myBtn">(Search Filters)</button>
-        <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-                <p>(content)</p>
+
+        <label for="message" class=" block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Ingredients</label>
+        <textarea id="message" rows="4" class="block p-2.5 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter desired ingredients"></textarea>
+        
+        <h3 class="mb-4 font-semibold text-gray-900 dark:text-white">Filter Dietary Options</h3>
+        <div class="checkboxes">
+            <div class="column-1">
+                <ul class="w-48 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                    <li class="w-full rounded-t-lg border-b border-gray-200 dark:border-gray-600">
+                        <div class="flex items-center pl-3">
+                            <input id="vue-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                            <label for="vue-checkbox" class="py-3 ml-2 w-full text-lg font-medium text-gray-900 dark:text-gray-300">Dairy-Free</label>
+                        </div>
+                    </li>
+                    <li class="w-full rounded-t-lg border-b border-gray-200 dark:border-gray-600">
+                        <div class="flex items-center pl-3">
+                            <input id="react-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                            <label for="react-checkbox" class="py-3 ml-2 w-full text-lg font-medium text-gray-900 dark:text-gray-300">Egg-Free</label>
+                        </div>
+                    </li>
+                    <li class="w-full rounded-t-lg border-b border-gray-200 dark:border-gray-600">
+                        <div class="flex items-center pl-3">
+                            <input id="angular-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                            <label for="angular-checkbox" class="py-3 ml-2 w-full text-lg font-medium text-gray-900 dark:text-gray-300">Gluten-Free</label>
+                        </div>
+                    </li>
+                    <li class="w-full rounded-t-lg border-b border-gray-200 dark:border-gray-600">
+                        <div class="flex items-center pl-3">
+                            <input id="laravel-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                            <label for="laravel-checkbox" class="py-3 ml-2 w-full text-lg font-medium text-gray-900 dark:text-gray-300">Kosher</label>
+                        </div>
+                    </li>
+                    <li class="w-full rounded-t-lg border-b border-gray-200 dark:border-gray-600">
+                        <div class="flex items-center pl-3">
+                            <input id="laravel-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                            <label for="laravel-checkbox" class="py-3 ml-2 w-full text-lg font-medium text-gray-900 dark:text-gray-300">Paleo</label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="column-2">
+                <ul class="w-48 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                    <li class="w-full rounded-t-lg border-b border-gray-200 dark:border-gray-600">
+                        <div class="flex items-center pl-3">
+                            <input id="vue-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                            <label for="vue-checkbox" class="py-3 ml-2 w-full text-lg font-medium text-gray-900 dark:text-gray-300">Pescatarian</label>
+                        </div>
+                    </li>
+                    <li class="w-full rounded-t-lg border-b border-gray-200 dark:border-gray-600">
+                        <div class="flex items-center pl-3">
+                            <input id="react-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                            <label for="react-checkbox" class="py-3 ml-2 w-full text-lg font-medium text-gray-900 dark:text-gray-300">Pork-Free</label>
+                        </div>
+                    </li>
+                    <li class="w-full rounded-t-lg border-b border-gray-200 dark:border-gray-600">
+                        <div class="flex items-center pl-3">
+                            <input id="angular-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                            <label for="angular-checkbox" class="py-3 ml-2 w-full text-lg font-medium text-gray-900 dark:text-gray-300">Red Meat Free</label>
+                        </div>
+                    </li>
+                    <li class="w-full rounded-t-lg border-b border-gray-200 dark:border-gray-600">
+                        <div class="flex items-center pl-3">
+                            <input id="laravel-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                            <label for="laravel-checkbox" class="py-3 ml-2 w-full text-lg font-medium text-gray-900 dark:text-gray-300">Soy-Free</label>
+                        </div>
+                    </li>
+                    <li class="w-full rounded-t-lg border-b border-gray-200 dark:border-gray-600">
+                        <div class="flex items-center pl-3">
+                            <input id="laravel-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                            <label for="laravel-checkbox" class="py-3 ml-2 w-full text-lg font-medium text-gray-900 dark:text-gray-300">Wheat-Free</label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="column-3">
+                <ul class="w-48 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                    <li class="w-full rounded-t-lg border-b border-gray-200 dark:border-gray-600">
+                        <div class="flex items-center pl-3">
+                            <input id="vue-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                            <label for="vue-checkbox" class="py-3 ml-2 w-full text-lg font-medium text-gray-900 dark:text-gray-300">Low Sugar</label>
+                        </div>
+                    </li>
+                    <li class="w-full rounded-t-lg border-b border-gray-200 dark:border-gray-600">
+                        <div class="flex items-center pl-3">
+                            <input id="react-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                            <label for="react-checkbox" class="py-3 ml-2 w-full text-lg font-medium text-gray-900 dark:text-gray-300">Vegan</label>
+                        </div>
+                    </li>
+                    <li class="w-full rounded-t-lg border-b border-gray-200 dark:border-gray-600">
+                        <div class="flex items-center pl-3">
+                            <input id="angular-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                            <label for="angular-checkbox" class="py-3 ml-2 w-full text-lg font-medium text-gray-900 dark:text-gray-300">Vegetarian</label>
+                        </div>
+                    </li>
+                    <li class="w-full rounded-t-lg border-b border-gray-200 dark:border-gray-600">
+                        <div class="flex items-center pl-3">
+                            <input id="laravel-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                            <label for="laravel-checkbox" class="py-3 ml-2 w-full text-lg font-medium text-gray-900 dark:text-gray-300">Shellfish-Free</label>
+                        </div>
+                    </li>
+                    <li class="w-full rounded-t-lg border-b border-gray-200 dark:border-gray-600">
+                        <div class="flex items-center pl-3">
+                            <input id="laravel-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                            <label for="laravel-checkbox" class="py-3 ml-2 w-full text-lg font-medium text-gray-900 dark:text-gray-300">Keto</label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
+
+
+    </main>
+
 
         <script src="./assets/script.js"></script>
 </body>
 </html>
+
+<!--dairy free
+egg 
+gluten
+keto
+kosher
+paleo
+pescatarian 
+pork free 
+low sugar
+vegan 
+vegetarian
+red meat free
+soy free
+shell fish free
+wheat-free
+-->
