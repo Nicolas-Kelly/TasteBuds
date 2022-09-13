@@ -1,0 +1,21 @@
+header{
+    display: flex;
+    justify-content: center;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.checkboxes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+textarea{
+    width: 50%;
+}
