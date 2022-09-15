@@ -16,6 +16,15 @@ function getRecipes(){
             checkedOptions.push(filterItem);
         }
     }
+    if(checkedOptions.length >= 1){
+        var filterUrlText = 'Health'
+    }
+
+
+    var ingredients = userIngredients.val();
+    var ingredients = ingredients.replaceAll(',', '');
+    var ingredientsURL = ingredients.replaceAll(' ', '%20');
+    console.log(ingredientsURL);
     console.log(checkedOptions);
 }
 
