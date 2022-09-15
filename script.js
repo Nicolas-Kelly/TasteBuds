@@ -1,7 +1,29 @@
+//variables
+userIngredients = $('#user-ingredients');
+dietFilter = $('.filter');
+submitButton = $('#submit-button');
+
+
+
+function getRecipes(){
+    console.log(userIngredients.val());
+
+    var checkedOptions = [];
+
+    for(i=0; i<dietFilter.length; i++){
+        if(dietFilter[i].checked === true){
+            var filterItem = dietFilter[i].getAttribute('id');
+            checkedOptions.push(filterItem);
+        }
+    }
+    console.log(checkedOptions);
+}
+
+
 //url that includes the ingredients the user wants to eat
 var url = 'https://api.spoonacular.com/recipes/findByIngredients?apiKey=7eec931589c14d89b714a88f037239c1&ingredients=apples,+flour,+sugar&number=1'
 
-var n=5;
+var n=6;
 
 if(n===3){
     fetch(url)
@@ -26,3 +48,6 @@ if(n===5){
         console.log(data);
     })
 };
+
+//Event listeners
+submitButton.on('click', getRecipes);
