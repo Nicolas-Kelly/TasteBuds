@@ -11,23 +11,22 @@
 <body>
     
     <header>
-        <img src="./assets/TasteBuds logo (Transparent Background).jpeg" alt="logo">
+        <img src="./assets/TasteBuds logo1.jpeg" alt="logo">
     </header>
     
-<<<<<<< HEAD
-    <main class="justify-center">
-=======
-    <main class="place-content-center">
->>>>>>> basicHTML
-        <h2 class="text-2xl text-center text-white">Search specific ingredients and filter any dietary restrictions to find recipes and their nutritional facts</h2>
-        
+    <main class="place-items-center text-white">
 
-        <label for="message" class=" block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Ingredients</label>
-        <textarea id="message" rows="4" class="block p-2.5 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter desired ingredients"></textarea>
+        <p>Welcome to Taste Buds! Here to make your meal decisions easier. Just let us know what ingredients you'd like to cook and any dietary restrictions you have, and we'll give you great recipes along with their nutritional facts!</p>
+        <hr class="my-4 mx-auto w-48 h-1 bg-gray-100 rounded border-0 md:my-10 dark:bg-gray-700">
+
+        <p>Step 1</p> <!--Make Very Big and Bold-->
+        <p>Enter Ingredients</p>
+        <textarea id="message" rows="4" class="block p-2.5 text-lg text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter desired ingredients (e.g. Salmon, Pork, Beef, Tomatoes, Pasta)"></textarea>
         
-        <h3 class="mb-4 font-semibold text-gray-900 dark:text-white">Filter Dietary Options</h3>
+        <p>Step 2</p> <!--Make Big and Bold-->
+        <p>Select Dietary Options</p>
         <div class="checkboxes">
-            <div class="column-1">
+            <div class="checkbox-column">
                 <ul class="w-48 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
                     <li class="w-full rounded-t-lg border-b border-gray-200 dark:border-gray-600">
                         <div class="flex items-center pl-3">
@@ -62,7 +61,7 @@
                 </ul>
             </div>
 
-            <div class="column-2">
+            <div class="checkbox-column">
                 <ul class="w-48 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
                     <li class="w-full rounded-t-lg border-b border-gray-200 dark:border-gray-600">
                         <div class="flex items-center pl-3">
@@ -97,7 +96,7 @@
                 </ul>
             </div>
 
-            <div class="column-3">
+            <div class="checkbox-column">
                 <ul class="w-48 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
                     <li class="w-full rounded-t-lg border-b border-gray-200 dark:border-gray-600">
                         <div class="flex items-center pl-3">
@@ -133,27 +132,17 @@
             </div>
         </div>
 
+        <!--Bigger Font-->
+        <button type="button" id="get-recipes" class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800">
+            <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                Get Recipes!
+            </span>
+        </button>
+
 
     </main>
 
 
-        <script src="./assets/script.js"></script>
+        <script src="script.js"></script>
 </body>
 </html>
-
-<!--dairy free
-egg 
-gluten
-keto
-kosher
-paleo
-pescatarian 
-pork free 
-low sugar
-vegan 
-vegetarian
-red meat free
-soy free
-shell fish free
-wheat-free
--->
