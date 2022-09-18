@@ -4,146 +4,314 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="./style.css"/>
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Taste Buds</title>
 </head>
 <body>
+    
     <header>
-        <img src="./assets/TasteBuds logo (Transparent Background).jpeg" alt="logo">
+        <img src="./assets/TasteBuds logo1.jpeg" alt="logo">
     </header>
     
-    <main class="place-content-center">
-        <h2 class="text-2xl text-center text-white">Search specific ingredients and filter any dietary restrictions to find recipes and their nutritional facts</h2>
-        
-<<<<<<< HEAD
-    <input type="text" placeholder="Search.." name="search1">
-        <button id="search" type="submit"></button>
-       
-        <button id="myBtn">(Search Filters)</button>
-        <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-                <p>(content)</p>
-=======
+    <main class="place-items-center text-white">
 
-        <label for="message" class=" block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Ingredients</label>
-        <textarea id="message" rows="4" class="block p-2.5 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter desired ingredients"></textarea>
+        <p>Welcome to Taste Buds! Here to make your meal decisions easier. Just let us know what ingredients you'd like to cook and any dietary restrictions you have, and we'll give you great recipes along with their nutritional facts!</p>
+        <hr class="my-4 mx-auto w-48 h-1 bg-gray-100 rounded border-0 md:my-10 dark:bg-gray-700">
+
+        <p>Step 1</p> <!--Make Very Big and Bold-->
+        <p>Enter Ingredients</p>
+        <textarea id="user-ingredients" rows="4" class="block p-2.5 text-lg text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter desired ingredients (e.g. Salmon, Pork, Beef, Tomatoes, Pasta)"></textarea>
         
-        <h3 class="mb-4 font-semibold text-gray-900 dark:text-white">Filter Dietary Options</h3>
+        <p>Step 2</p>
+        <p>Cuisine Type</p>
         <div class="checkboxes">
-            <div class="column-1">
+            <div class="checkbox-column">
+                <ul class="w-48 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                    <li class="w-full rounded-t-lg">
+                        <div class="flex items-center pl-3">
+                            <input id="American" type="checkbox" value="" class="cuisine w-4">
+                            <label for="vue-checkbox" class="py-3 ml-2 w-full text-lg">American</label>
+                        </div>
+                    </li>
+                    <li class="w-full rounded-t-lg">
+                        <div class="flex items-center pl-3">
+                            <input id="Asian" type="checkbox" value="" class="cuisine w-4">
+                            <label for="vue-checkbox" class="py-3 ml-2 w-full text-lg">Asian</label>
+                        </div>
+                    </li>
+                    <li class="w-full rounded-t-lg">
+                        <div class="flex items-center pl-3">
+                            <input id="British" type="checkbox" value="" class="cuisine w-4">
+                            <label for="vue-checkbox" class="py-3 ml-2 w-full text-lg">British</label>
+                        </div>
+                    </li>
+                    <li class="w-full rounded-t-lg">
+                        <div class="flex items-center pl-3">
+                            <input id="Caribbean" type="checkbox" value="" class="cuisine w-4">
+                            <label for="vue-checkbox" class="py-3 ml-2 w-full text-lg">Caribbean</label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="checkbox-column">
+                <ul class="w-48 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                    <li class="w-full rounded-t-lg">
+                        <div class="flex items-center pl-3">
+                            <input id="Central-Europe" type="checkbox" value="" class="cuisine w-4">
+                            <label for="vue-checkbox" class="py-3 ml-2 w-full text-lg">Central Europe</label>
+                        </div>
+                    </li>
+                    <li class="w-full rounded-t-lg">
+                        <div class="flex items-center pl-3">
+                            <input id="Chinese" type="checkbox" value="" class="cuisine w-4">
+                            <label for="vue-checkbox" class="py-3 ml-2 w-full text-lg">Chinese</label>
+                        </div>
+                    </li>
+                    <li class="w-full rounded-t-lg">
+                        <div class="flex items-center pl-3">
+                            <input id="Eastern-Europe" type="checkbox" value="" class="cuisine w-4">
+                            <label for="vue-checkbox" class="py-3 ml-2 w-full text-lg">Eastern Europe</label>
+                        </div>
+                    </li>
+                    <li class="w-full rounded-t-lg">
+                        <div class="flex items-center pl-3">
+                            <input id="French" type="checkbox" value="" class="cuisine w-4">
+                            <label for="vue-checkbox" class="py-3 ml-2 w-full text-lg">French</label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="checkbox-column">
+                <ul class="w-48 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                    <li class="w-full rounded-t-lg">
+                        <div class="flex items-center pl-3">
+                            <input id="Indian" type="checkbox" value="" class="cuisine w-4">
+                            <label for="vue-checkbox" class="py-3 ml-2 w-full text-lg">Indian</label>
+                        </div>
+                    </li>
+                    <li class="w-full rounded-t-lg">
+                        <div class="flex items-center pl-3">
+                            <input id="Italian" type="checkbox" value="" class="cuisine w-4">
+                            <label for="vue-checkbox" class="py-3 ml-2 w-full text-lg">Italian</label>
+                        </div>
+                    </li>
+                    <li class="w-full rounded-t-lg">
+                        <div class="flex items-center pl-3">
+                            <input id="Japanese" type="checkbox" value="" class="cuisine w-4">
+                            <label for="vue-checkbox" class="py-3 ml-2 w-full text-lg">Japanese</label>
+                        </div>
+                    </li>
+                    <li class="w-full rounded-t-lg">
+                        <div class="flex items-center pl-3">
+                            <input id="Mediterranean" type="checkbox" value="" class="cuisine w-4">
+                            <label for="vue-checkbox" class="py-3 ml-2 w-full text-lg">Mediterranean</label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="checkbox-column">
+                <ul class="w-48 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                    <li class="w-full rounded-t-lg">
+                        <div class="flex items-center pl-3">
+                            <input id="Mexican" type="checkbox" value="" class="cuisine w-4">
+                            <label for="vue-checkbox" class="py-3 ml-2 w-full text-lg">Mexican</label>
+                        </div>
+                    </li>
+                    <li class="w-full rounded-t-lg">
+                        <div class="flex items-center pl-3">
+                            <input id="Middle-Eastern" type="checkbox" value="" class="cuisine w-4">
+                            <label for="vue-checkbox" class="py-3 ml-2 w-full text-lg">Middle Eastern</label>
+                        </div>
+                    </li>
+                    <li class="w-full rounded-t-lg">
+                        <div class="flex items-center pl-3">
+                            <input id="Nordic" type="checkbox" value="" class="cuisine w-4">
+                            <label for="vue-checkbox" class="py-3 ml-2 w-full text-lg">Nordic</label>
+                        </div>
+                    </li>
+                    <li class="w-full rounded-t-lg">
+                        <div class="flex items-center pl-3">
+                            <input id="South-American" type="checkbox" value="" class="cuisine w-4">
+                            <label for="vue-checkbox" class="py-3 ml-2 w-full text-lg">South American</label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="checkbox-column">
+                <ul class="w-48 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                    <li class="w-full rounded-t-lg">
+                        <div class="flex items-center pl-3">
+                            <input id="South-East-Asian" type="checkbox" value="" class="cuisine w-4">
+                            <label for="vue-checkbox" class="py-3 ml-2 w-full text-lg">South East Asian</label>
+                        </div>
+                    </li>
+                    <li class="w-full rounded-t-lg">
+                        <div class="flex items-center pl-3">
+                            <input id="No-Preference" type="checkbox" value="" class="cuisine w-4">
+                            <label for="vue-checkbox" class="py-3 ml-2 w-full text-lg">No Preference</label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <p>Step 2</p> <!--Make Big and Bold-->
+        <p>Select Dietary Options</p>
+        <div class="checkboxes">
+            <div class="checkbox-column">
                 <ul class="w-48 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
                     <li class="w-full rounded-t-lg border-b border-gray-200 dark:border-gray-600">
                         <div class="flex items-center pl-3">
-                            <input id="vue-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                            <input id="dairy-free" type="checkbox" value="" class="filter w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
                             <label for="vue-checkbox" class="py-3 ml-2 w-full text-lg font-medium text-gray-900 dark:text-gray-300">Dairy-Free</label>
                         </div>
                     </li>
                     <li class="w-full rounded-t-lg border-b border-gray-200 dark:border-gray-600">
                         <div class="flex items-center pl-3">
-                            <input id="react-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                            <input id="egg-free" type="checkbox" value="" class="filter w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
                             <label for="react-checkbox" class="py-3 ml-2 w-full text-lg font-medium text-gray-900 dark:text-gray-300">Egg-Free</label>
                         </div>
                     </li>
                     <li class="w-full rounded-t-lg border-b border-gray-200 dark:border-gray-600">
                         <div class="flex items-center pl-3">
-                            <input id="angular-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                            <input id="gluten-free" type="checkbox" value="" class="filter w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
                             <label for="angular-checkbox" class="py-3 ml-2 w-full text-lg font-medium text-gray-900 dark:text-gray-300">Gluten-Free</label>
                         </div>
                     </li>
                     <li class="w-full rounded-t-lg border-b border-gray-200 dark:border-gray-600">
                         <div class="flex items-center pl-3">
-                            <input id="laravel-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                            <input id="kosher" type="checkbox" value="" class="filter w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
                             <label for="laravel-checkbox" class="py-3 ml-2 w-full text-lg font-medium text-gray-900 dark:text-gray-300">Kosher</label>
                         </div>
                     </li>
                     <li class="w-full rounded-t-lg border-b border-gray-200 dark:border-gray-600">
                         <div class="flex items-center pl-3">
-                            <input id="laravel-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                            <input id="paleo" type="checkbox" value="" class="filter w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
                             <label for="laravel-checkbox" class="py-3 ml-2 w-full text-lg font-medium text-gray-900 dark:text-gray-300">Paleo</label>
                         </div>
                     </li>
                 </ul>
             </div>
 
-            <div class="column-2">
+            <div class="checkbox-column">
                 <ul class="w-48 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
                     <li class="w-full rounded-t-lg border-b border-gray-200 dark:border-gray-600">
                         <div class="flex items-center pl-3">
-                            <input id="vue-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                            <input id="pescatarian" type="checkbox" value="" class="filter w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
                             <label for="vue-checkbox" class="py-3 ml-2 w-full text-lg font-medium text-gray-900 dark:text-gray-300">Pescatarian</label>
                         </div>
                     </li>
                     <li class="w-full rounded-t-lg border-b border-gray-200 dark:border-gray-600">
                         <div class="flex items-center pl-3">
-                            <input id="react-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                            <input id="pork-free" type="checkbox" value="" class="filter w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
                             <label for="react-checkbox" class="py-3 ml-2 w-full text-lg font-medium text-gray-900 dark:text-gray-300">Pork-Free</label>
                         </div>
                     </li>
                     <li class="w-full rounded-t-lg border-b border-gray-200 dark:border-gray-600">
                         <div class="flex items-center pl-3">
-                            <input id="angular-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                            <input id="red-meat-free" type="checkbox" value="" class="filter w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
                             <label for="angular-checkbox" class="py-3 ml-2 w-full text-lg font-medium text-gray-900 dark:text-gray-300">Red Meat Free</label>
                         </div>
                     </li>
                     <li class="w-full rounded-t-lg border-b border-gray-200 dark:border-gray-600">
                         <div class="flex items-center pl-3">
-                            <input id="laravel-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                            <input id="soy-free" type="checkbox" value="" class="filter w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
                             <label for="laravel-checkbox" class="py-3 ml-2 w-full text-lg font-medium text-gray-900 dark:text-gray-300">Soy-Free</label>
                         </div>
                     </li>
                     <li class="w-full rounded-t-lg border-b border-gray-200 dark:border-gray-600">
                         <div class="flex items-center pl-3">
-                            <input id="laravel-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                            <input id="wheat-free" type="checkbox" value="" class="filter w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
                             <label for="laravel-checkbox" class="py-3 ml-2 w-full text-lg font-medium text-gray-900 dark:text-gray-300">Wheat-Free</label>
                         </div>
                     </li>
                 </ul>
             </div>
 
-            <div class="column-3">
+            <div class="checkbox-column">
                 <ul class="w-48 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
                     <li class="w-full rounded-t-lg border-b border-gray-200 dark:border-gray-600">
                         <div class="flex items-center pl-3">
-                            <input id="vue-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                            <input id="low-sugar" type="checkbox" value="" class="filter w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
                             <label for="vue-checkbox" class="py-3 ml-2 w-full text-lg font-medium text-gray-900 dark:text-gray-300">Low Sugar</label>
                         </div>
                     </li>
                     <li class="w-full rounded-t-lg border-b border-gray-200 dark:border-gray-600">
                         <div class="flex items-center pl-3">
-                            <input id="react-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                            <input id="vegan" type="checkbox" value="" class="filter w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
                             <label for="react-checkbox" class="py-3 ml-2 w-full text-lg font-medium text-gray-900 dark:text-gray-300">Vegan</label>
                         </div>
                     </li>
                     <li class="w-full rounded-t-lg border-b border-gray-200 dark:border-gray-600">
                         <div class="flex items-center pl-3">
-                            <input id="angular-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                            <input id="vegetarian" type="checkbox" value="" class="filter w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
                             <label for="angular-checkbox" class="py-3 ml-2 w-full text-lg font-medium text-gray-900 dark:text-gray-300">Vegetarian</label>
                         </div>
                     </li>
                     <li class="w-full rounded-t-lg border-b border-gray-200 dark:border-gray-600">
                         <div class="flex items-center pl-3">
-                            <input id="laravel-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                            <input id="Shellfish-Free" type="checkbox" value="" class="filter w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
                             <label for="laravel-checkbox" class="py-3 ml-2 w-full text-lg font-medium text-gray-900 dark:text-gray-300">Shellfish-Free</label>
                         </div>
                     </li>
                     <li class="w-full rounded-t-lg border-b border-gray-200 dark:border-gray-600">
                         <div class="flex items-center pl-3">
-                            <input id="laravel-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
+                            <input id="keto" type="checkbox" value="" class="filter w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
                             <label for="laravel-checkbox" class="py-3 ml-2 w-full text-lg font-medium text-gray-900 dark:text-gray-300">Keto</label>
                         </div>
                     </li>
                 </ul>
             </div>
->>>>>>> 53ae2728be514fdd43ab025faa558c95dc72e790
         </div>
+
+        <p>Step 3</p>
+        <p>Choose Max number of ingredients you want to include</p>
+        <div class="flex justify-center">
+            <div class="mb-3 xl:w-96">
+              <label for="exampleNumber0" class="form-label inline-block mb-2">Number input</label>
+                <input id="max-ingredients" type="number" class="form-control block w-full px-3 py-1.5 text-base bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="Max Ingredients"/>
+            </div>
+        </div>
+
+          <p>Step 4</p>
+          <p>Calorie Range</p>
+          <div class="flex justify-center">
+            <div class="mb-3 xl:w-96">
+              <label for="exampleNumber0" class="form-label inline-block mb-2">Minimum Desired Calories</label>
+                <input id="min-calories" type="number" class="form-control block w-full px-3 py-1.5 text-base bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="Min Calories"/>
+            </div>
+        </div>
+
+        <div class="flex justify-center">
+            <div class="mb-3 xl:w-96">
+              <label for="exampleNumber0" class="form-label inline-block mb-2">Maximum Desired Calories</label>
+                <input id="max-calories" type="number" class="form-control block w-full px-3 py-1.5 text-base bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="Max Calories"/>
+            </div>
+        </div>
+
+
+
+        <p>Get Recipes!</p>
+        <!--Bigger Font-->
+        <button type="button" id="submit-button" class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800">
+            <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                Get Recipes!
+            </span>
+        </button>
+
+       <!-- recipe card grid-->
+      <div id="recipeCards" class="grid gap-4 gap-y-8 md:grid-cols-2 lg:grid-cols-3 mb-16"></div>
 
 
     </main>
 
-
-        <script src="./assets/script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script src="script.js"></script>
 </body>
 </html>
 
